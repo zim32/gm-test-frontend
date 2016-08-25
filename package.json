@@ -1,0 +1,14 @@
+{
+  "name": "gm-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "static-server -p 8081"
+  },
+  "author": "zim32",
+  "license": "MIT",
+  "devDependencies": {
+    "json-server": "^0.8.14"
+  }
+}

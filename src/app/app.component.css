@@ -1,0 +1,46 @@
+:host {
+    text-align: center;
+    font-size: 34px;
+}
+
+.event-container .event-info .meaning {
+    color: #888;
+}
+
+.event-container .names {
+    font-size: 40px;
+    border-bottom: 2px solid #4d90fe;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.event-container .names h1 {
+    margin-bottom:0;
+}
+
+.event-container .names.small h1 {
+    font-size: 30px;
+}
+
+.event-container .names.small .where {
+    position: relative;
+    top: -6px;
+    font-size: 20px;
+}
+
+.event-container .names .where {
+    font-size: 30px;
+    color: #888;
+}
+
+.event-container .details {
+    border-bottom: 2px solid #4d90fe;
+}
+
+.event-container .details .value.state.started {
+    color: #4caf50;
+}
+
+.event-container .details .value.state.not_started {
+    color: #c77405;
+}

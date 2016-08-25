@@ -1,0 +1,59 @@
+<div class="container">
+
+    <div class="row" *ngIf="currentEvent">
+        <div class="col-lg-12 event-container">
+            <div class="event-info">
+
+                <div class="names hidden-xs large">
+                    <h1><span class="where">(home)</span> {{ currentEvent.name }} <span class="where">(away)</span></h1>
+                </div>
+
+                <div class="details">
+
+                    <div class="names hidden-sm hidden-md hidden-lg small">
+                        <h1>{{ currentEvent.homeName }}</h1>
+                        <div class="where">(home)</div>
+                        <h1>{{ currentEvent.awayName }}</h1>
+                        <div class="where">(away)</div>
+                    </div>
+
+                    <div>
+                        <span class="meaning">State: </span>
+                        <span class="value state {{currentEvent.state.toLowerCase()}}">{{ currentEvent.state }}</span>
+                    </div>
+
+                    <div>
+                        <span class="meaning">Group: </span>
+                        <span class="value">{{ currentEvent.group }}</span>
+                    </div>
+
+                    <div>
+                        <span class="meaning">Country: </span>
+                        <span class="value">{{ currentEvent.country }}</span>
+                    </div>
+
+                    <div>
+                        <span class="meaning">Sport: </span>
+                        <span class="value">{{ currentEvent.sport }}</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row vote-buttons">
+            <div class="col-lg-4"><button class="btn btn-primary btn-raised" (click)="makeVote(0,$event.target)">Home Win</button></div>
+            <div class="col-lg-4"><button class="btn btn-default btn-raised" (click)="makeVote(1,$event.target)">Draw</button></div>
+            <div class="col-lg-4"><button class="btn btn-primary btn-raised" (click)="makeVote(2,$event.target)">Away Win</button></div>
+        </div>
+
+    </div>
+
+    <div *ngIf="!currentEvent">
+        <div class="alert alert-success">Good. No more events left</div>
+    </div>
+
+
+</div>
